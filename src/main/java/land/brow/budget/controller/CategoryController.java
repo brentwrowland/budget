@@ -5,42 +5,41 @@ import io.micronaut.http.HttpStatus;
 import io.micronaut.http.annotation.*;
 import io.micronaut.scheduling.TaskExecutors;
 import io.micronaut.scheduling.annotation.ExecuteOn;
-import land.brow.budget.entity.Asset;
-import land.brow.budget.service.AssetService;
+import land.brow.budget.entity.Category;
+import land.brow.budget.service.DefaultCategoryService;
 
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 import java.util.Optional;
 
-@Controller("/assets")
+@Controller("/categories")
 @ExecuteOn(TaskExecutors.IO)
-public class AssetController {
+public class CategoryController {
 
-    private final AssetService service;
+    private final DefaultCategoryService service;
 
-    public AssetController(AssetService service) {
+    public CategoryController(DefaultCategoryService service) {
         this.service = service;
     }
 
     @Get
-    Iterable<Asset> list() {
+    Iterable<Category> list() {
         return service.list();
     }
 
     @Post
     @Status(HttpStatus.CREATED)
-    Asset save(@NonNull @NotNull @Valid Asset asset) {
-        return service.save(asset);
+    Category save(@NonNull @NotNull @Valid Category category) {
+        return service.save(category);
     }
 
     @Put
-    Asset update(@NonNull @NotNull @Valid Asset asset) {
-        return service.update(asset);
+    Category update(@NonNull @NotNull @Valid Category category) {
+        return service.update(category);
     }
 
     @Get("/{id}")
-    Optional<Asset> find(@PathVariable String id) {
+    Optional<Category> find(@PathVariable String id) {
         return service.find(id);
     }
-
 }

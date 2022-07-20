@@ -14,31 +14,29 @@ import java.util.Optional;
 
 @Controller("/transactions")
 @ExecuteOn(TaskExecutors.IO)
-public class TransactionController
-{
+public class TransactionController {
     private final TransactionService service;
-    
-    public TransactionController(TransactionService service)
-    {
+
+    public TransactionController(TransactionService service) {
         this.service = service;
     }
-    
+
     @Get
-    Iterable<Transaction> list(){
+    Iterable<Transaction> list() {
         return service.list();
     }
-    
+
     @Post
     @Status(HttpStatus.CREATED)
     Transaction save(@NonNull @NotNull @Valid Transaction transaction) {
         return service.save(transaction);
     }
-    
+
     @Put
     Transaction update(@NonNull @NotNull @Valid Transaction transaction) {
         return service.update(transaction);
     }
-    
+
     @Get("/{id}")
     Optional<Transaction> find(@PathVariable String id) {
         return service.find(id);

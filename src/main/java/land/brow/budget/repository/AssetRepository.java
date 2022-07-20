@@ -5,6 +5,5 @@ import io.micronaut.data.repository.CrudRepository;
 import land.brow.budget.entity.Asset;
 
 @MongoRepository
-public interface AssetRepository extends CrudRepository<Asset, String>
-{
+public interface AssetRepository extends CrudRepository<Asset, String> {
 }

@@ -5,13 +5,12 @@ import land.brow.budget.entity.Transaction;
 
 import java.util.Optional;
 
-public interface TransactionService
-{
+public interface TransactionService {
     Iterable<Transaction> list();
-    
+
     Transaction save(Transaction transaction);
-    
+
     Transaction update(Transaction transaction);
-    
+
     Optional<Transaction> find(@NonNull String id);
 }

@@ -1,7 +1,6 @@
 package land.brow.budget.entity;
 
-public enum AssetType
-{
+public enum AssetType {
     BITCOIN,
     LIGHTNING,
     ASSET,

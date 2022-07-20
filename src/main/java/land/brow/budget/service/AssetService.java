@@ -7,13 +7,12 @@ import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 import java.util.Optional;
 
-public interface AssetService
-{
+public interface AssetService {
     Iterable<Asset> list();
-    
+
     Asset save(@NotNull @Valid Asset asset);
-    
+
     Asset update(Asset asset);
-    
+
     Optional<Asset> find(@NonNull String id);
 }
