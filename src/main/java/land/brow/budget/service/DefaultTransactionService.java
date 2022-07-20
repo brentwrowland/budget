@@ -24,10 +24,21 @@ public class DefaultTransactionService implements TransactionService
     
     public Transaction save(Transaction transaction)
     {
+        if (transaction.getId() != null)
+        {
+            return null;
+        }
+        
+        return repo.save(transaction);
+    }
+    
+    public Transaction update(Transaction transaction)
+    {
         if (transaction.getId() == null)
         {
-            return repo.save(transaction);
+            return null;
         }
+        
         return repo.update(transaction);
     }
     

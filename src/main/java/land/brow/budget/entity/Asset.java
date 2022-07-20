@@ -24,4 +24,54 @@ public class Asset
     @NonNull
     @NotBlank
     private String name;
+    
+    public Asset(@Nullable String address, @NonNull AssetType type, @NonNull String name)
+    {
+        this.address = address;
+        this.type = type;
+        this.name = name;
+    }
+    
+    public String getId()
+    {
+        return id;
+    }
+    
+    public void setId(String id)
+    {
+        this.id = id;
+    }
+    
+    @Nullable
+    public String getAddress()
+    {
+        return address;
+    }
+    
+    public void setAddress(@Nullable String address)
+    {
+        this.address = address;
+    }
+    
+    @NonNull
+    public AssetType getType()
+    {
+        return type;
+    }
+    
+    public void setType(@NonNull AssetType type)
+    {
+        this.type = type;
+    }
+    
+    @NonNull
+    public String getName()
+    {
+        return name;
+    }
+    
+    public void setName(@NonNull String name)
+    {
+        this.name = name;
+    }
 }

@@ -11,5 +11,7 @@ public interface TransactionService
     
     Transaction save(Transaction transaction);
     
+    Transaction update(Transaction transaction);
+    
     Optional<Transaction> find(@NonNull String id);
 }

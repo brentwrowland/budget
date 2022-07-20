@@ -36,7 +36,7 @@ public class TransactionController
     
     @Put
     Transaction update(@NonNull @NotNull @Valid Transaction transaction) {
-        return service.save(transaction);
+        return service.update(transaction);
     }
     
     @Get("/{id}")
