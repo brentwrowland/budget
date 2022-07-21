@@ -1,20 +1,18 @@
-package land.brow.budget.service;
+package land.brow.budget.module.category;
 
 import io.micronaut.core.annotation.NonNull;
 import jakarta.inject.Singleton;
-import land.brow.budget.entity.Category;
-import land.brow.budget.repository.CategoryRepository;
 
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 import java.util.Optional;
 
 @Singleton
-public class DefaultCategoryService {
+public class CategoryService {
 
     private final CategoryRepository repo;
 
-    public DefaultCategoryService(CategoryRepository repo) {
+    public CategoryService(CategoryRepository repo) {
         this.repo = repo;
     }
 

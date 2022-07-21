@@ -1,12 +1,10 @@
-package land.brow.budget.controller;
+package land.brow.budget.module.category;
 
 import io.micronaut.core.annotation.NonNull;
 import io.micronaut.http.HttpStatus;
 import io.micronaut.http.annotation.*;
 import io.micronaut.scheduling.TaskExecutors;
 import io.micronaut.scheduling.annotation.ExecuteOn;
-import land.brow.budget.entity.Category;
-import land.brow.budget.service.DefaultCategoryService;
 
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -16,9 +14,9 @@ import java.util.Optional;
 @ExecuteOn(TaskExecutors.IO)
 public class CategoryController {
 
-    private final DefaultCategoryService service;
+    private final CategoryService service;
 
-    public CategoryController(DefaultCategoryService service) {
+    public CategoryController(CategoryService service) {
         this.service = service;
     }
 

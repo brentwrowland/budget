@@ -1,4 +1,4 @@
-package land.brow.budget.entity;
+package land.brow.budget.module.category;
 
 import io.micronaut.core.annotation.NonNull;
 import io.micronaut.core.annotation.Nullable;

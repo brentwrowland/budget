@@ -1,12 +1,10 @@
-package land.brow.budget.controller;
+package land.brow.budget.module.asset;
 
 import io.micronaut.core.annotation.NonNull;
 import io.micronaut.http.HttpStatus;
 import io.micronaut.http.annotation.*;
 import io.micronaut.scheduling.TaskExecutors;
 import io.micronaut.scheduling.annotation.ExecuteOn;
-import land.brow.budget.entity.Asset;
-import land.brow.budget.service.AssetService;
 
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -42,5 +40,4 @@ public class AssetController {
     Optional<Asset> find(@PathVariable String id) {
         return service.find(id);
     }
-
 }

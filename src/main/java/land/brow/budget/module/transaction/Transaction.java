@@ -1,4 +1,4 @@
-package land.brow.budget.entity;
+package land.brow.budget.module.transaction;
 
 import io.micronaut.core.annotation.Nullable;
 import io.micronaut.data.annotation.GeneratedValue;

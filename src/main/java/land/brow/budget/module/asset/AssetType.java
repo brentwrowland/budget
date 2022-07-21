@@ -1,4 +1,4 @@
-package land.brow.budget.entity;
+package land.brow.budget.module.asset;
 
 public enum AssetType {
     BITCOIN,

@@ -1,12 +1,10 @@
-package land.brow.budget.controller;
+package land.brow.budget.module.transaction;
 
 import io.micronaut.core.annotation.NonNull;
 import io.micronaut.http.HttpStatus;
 import io.micronaut.http.annotation.*;
 import io.micronaut.scheduling.TaskExecutors;
 import io.micronaut.scheduling.annotation.ExecuteOn;
-import land.brow.budget.entity.Transaction;
-import land.brow.budget.service.TransactionService;
 
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -22,7 +20,7 @@ public class TransactionController {
     }
 
     @Get
-    Iterable<Transaction> list() {
+    Iterable<TransactionView> list() {
         return service.list();
     }
 

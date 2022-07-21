@@ -1,19 +1,20 @@
-package land.brow.budget.entity;
+package land.brow.budget.module.asset;
 
 import io.micronaut.core.annotation.NonNull;
 import io.micronaut.core.annotation.Nullable;
 import io.micronaut.data.annotation.GeneratedValue;
 import io.micronaut.data.annotation.Id;
+import io.micronaut.data.annotation.MappedEntity;
 
 import javax.validation.constraints.NotBlank;
 
+@MappedEntity
 public class Asset {
     @Id
     @GeneratedValue
     private String id;
 
     @Nullable
-    @NotBlank
     private String address;
 
     @NonNull
